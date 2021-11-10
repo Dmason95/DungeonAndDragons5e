@@ -1,6 +1,6 @@
 package DungeonAndDragons;
 
-import java.awt.GridLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -46,11 +46,13 @@ public class CenterPanel extends JPanel {
         TheTest.setTitle("Dungeons And Dragons 5e Character Creator");
         TheTest.setVisible(true);
         TheTest.setLayout(entryGrid);
+
         JLabel characterName = new JLabel("Character Name");
         TheTest.add(characterName);
         characterName.setHorizontalAlignment(JLabel.CENTER);
         JTextField characterNameEntry = new JTextField();
         TheTest.add(characterNameEntry);
+
         JLabel playerName = new JLabel("Player Name");
         TheTest.add(playerName);
         playerName.setHorizontalAlignment(JLabel.CENTER);
@@ -91,8 +93,14 @@ public class CenterPanel extends JPanel {
         backgroundChoice.setSelectedIndex(-1);
         backgroundChoice.setRenderer(dlcr);
 
-        Jlabel strengthLabel = new JLabel("Strength");
+        JLabel strengthLabel = new JLabel("Strength");
         TheTest.add(strengthLabel);
+        strengthLabel.setHorizontalAlignment(JLabel.CENTER);
+        JTextField StrengthRollField = new JTextField();
+        TheTest.add(StrengthRollField);
+
+        JButton Save = new JButton("Save");
+        TheTest.add(Save);
 
 
         TheTest.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
