@@ -1,7 +1,3 @@
-/**
- * @author Brandon Campbell
- * @version 1.0
- */
 package DungeonAndDragons.classes;
 
 import java.util.ArrayList;
