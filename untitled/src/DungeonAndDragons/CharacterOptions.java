@@ -19,7 +19,7 @@ public class CharacterOptions {
     final static String characterSelectionFileCSV = "C:\\Program Files (x86)\\Notepad++\\testingFile.csv";
 
     static ArrayList<String> possibleCharacterRaces = new ArrayList<>();
-    static ArrayList<String> possibleCharacterAlignment = new ArrayList<>();
+    static ArrayList<String> possibleCharacterAlignments = new ArrayList<>();
     static ArrayList<String> possibleCharacterClasses = new ArrayList<>();
     static ArrayList<String> possibleCharacterBackgrounds = new ArrayList<>();
 
@@ -28,11 +28,12 @@ public class CharacterOptions {
 
         try {
             buildCharacterRacesArrays(characterSelectionFileCSV,possibleCharacterRaces);
-            buildCharacterAlignmentArrays(characterSelectionFileCSV,possibleCharacterAlignment);
+            buildCharacterAlignmentArrays(characterSelectionFileCSV,possibleCharacterAlignments);
             buildCharacterBackgroundsArrays(characterSelectionFileCSV,possibleCharacterBackgrounds);
             buildCharacterClassesArrays(characterSelectionFileCSV,possibleCharacterClasses);
 
-            System.out.println(possibleCharacterRaces.toString() + " " + possibleCharacterAlignment.toString() + " " + possibleCharacterClasses.toString() + " " + possibleCharacterBackgrounds.toString());
+            // System testing output
+            // System.out.println(possibleCharacterRaces.toString() + " " + possibleCharacterAlignment.toString() + " " + possibleCharacterClasses.toString() + " " + possibleCharacterBackgrounds.toString());
 
         } catch (Exception e) {
             System.out.println(e);
@@ -42,16 +43,16 @@ public class CharacterOptions {
     /**
      *
      * @param characterSelectionFileCSV
-     * @param possibleCharacterAlignment
+     * @param possibleCharacterAlignments
      */
-    private static ArrayList<String> buildCharacterAlignmentArrays(String characterSelectionFileCSV, ArrayList<String> possibleCharacterAlignment) throws FileNotFoundException,IOException {
+    private static ArrayList<String> buildCharacterAlignmentArrays(String characterSelectionFileCSV, ArrayList<String> possibleCharacterAlignments) throws FileNotFoundException,IOException {
         String line;
         BufferedReader reader = new BufferedReader(new FileReader(characterSelectionFileCSV));
 
         try {
             while ((line = reader.readLine()) != null) {
                 String[] output = line.split(",");
-                possibleCharacterAlignment.add(output[1].trim());
+                possibleCharacterAlignments.add(output[1].trim());
             }
             reader.close();
         }
@@ -64,7 +65,7 @@ public class CharacterOptions {
         catch(Exception e){
             System.out.println(e);
         }
-        return possibleCharacterAlignment;
+        return possibleCharacterAlignments;
 
     }
     /**
@@ -72,14 +73,14 @@ public class CharacterOptions {
      * @param characterSelectionFileCSV
      * @param possibleCharacterAlignment
      */
-    private static ArrayList<String> buildCharacterClassesArrays(String characterSelectionFileCSV, ArrayList<String> possibleCharacterAlignment) throws FileNotFoundException,IOException {
+    private static ArrayList<String> buildCharacterClassesArrays(String characterSelectionFileCSV, ArrayList<String> possibleCharacterClasses) throws FileNotFoundException,IOException {
         String line;
         BufferedReader reader = new BufferedReader(new FileReader(characterSelectionFileCSV));
 
         try {
             while ((line = reader.readLine()) != null) {
                 String[] output = line.split(",");
-                possibleCharacterAlignment.add(output[2].trim());
+                possibleCharacterClasses.add(output[2].trim());
             }
             reader.close();
         }
@@ -92,7 +93,7 @@ public class CharacterOptions {
         catch(Exception e){
             System.out.println(e);
         }
-        return possibleCharacterAlignment;
+        return possibleCharacterClasses;
 
     }
 
@@ -101,14 +102,14 @@ public class CharacterOptions {
      * @param characterSelectionFileCSV
      * @param possibleCharacterAlignment
      */
-    private static ArrayList<String> buildCharacterBackgroundsArrays(String characterSelectionFileCSV, ArrayList<String> possibleCharacterAlignment) throws FileNotFoundException,IOException {
+    private static ArrayList<String> buildCharacterBackgroundsArrays(String characterSelectionFileCSV, ArrayList<String> possibleCharacterBackgrounds) throws FileNotFoundException,IOException {
         String line;
         BufferedReader reader = new BufferedReader(new FileReader(characterSelectionFileCSV));
 
         try {
             while ((line = reader.readLine()) != null) {
                 String[] output = line.split(",");
-                possibleCharacterAlignment.add(output[3].trim());
+                possibleCharacterBackgrounds.add(output[3].trim());
             }
             reader.close();
         }
@@ -121,7 +122,7 @@ public class CharacterOptions {
         catch(Exception e){
             System.out.println(e);
         }
-        return possibleCharacterAlignment;
+        return possibleCharacterBackgrounds;
 
     }
 
