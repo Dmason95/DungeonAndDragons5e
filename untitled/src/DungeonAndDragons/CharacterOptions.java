@@ -16,7 +16,9 @@ public class CharacterOptions {
      * Backgrounds fourth
      * Races,Alignments,Classes,Backgrounds
      */
-    final static String characterSelectionFileCSV = "C:\\Program Files (x86)\\Notepad++\\testingFile.csv";
+
+
+    final static String characterSelectionFileCSV = "C:\\Users\\Apex Gaming\\Documents\\GitHub\\DungeonAndDragons5e\\untitled\\src\\DungeonAndDragons\\assets\\DropDownResourceFile.txt";
 
     static ArrayList<String> possibleCharacterRaces = new ArrayList<>();
     static ArrayList<String> possibleCharacterAlignments = new ArrayList<>();
@@ -52,7 +54,10 @@ public class CharacterOptions {
         try {
             while ((line = reader.readLine()) != null) {
                 String[] output = line.split(",");
-                possibleCharacterAlignments.add(output[1].trim());
+
+                if (output.length != 0) {
+                    possibleCharacterAlignments.add(output[1].trim());
+                }
             }
             reader.close();
         }
@@ -80,7 +85,10 @@ public class CharacterOptions {
         try {
             while ((line = reader.readLine()) != null) {
                 String[] output = line.split(",");
-                possibleCharacterClasses.add(output[2].trim());
+
+                if (output.length != 0) {
+                    possibleCharacterClasses.add(output[2].trim());
+                }
             }
             reader.close();
         }
@@ -109,7 +117,10 @@ public class CharacterOptions {
         try {
             while ((line = reader.readLine()) != null) {
                 String[] output = line.split(",");
-                possibleCharacterBackgrounds.add(output[3].trim());
+
+                if (output.length != 0) {
+                    possibleCharacterBackgrounds.add(output[3].trim());
+                }
             }
             reader.close();
         }
@@ -143,7 +154,11 @@ public class CharacterOptions {
             while((line = reader.readLine()) != null) {
 
                 String[] output = line.split(",");
-                possibleCharacterRaces.add(output[0].trim());
+
+                if (output[0].trim().length() != 0) {
+                    System.out.println(output[0].trim());
+                    possibleCharacterRaces.add(output[0].trim());
+                }
             }
             reader.close();
         }

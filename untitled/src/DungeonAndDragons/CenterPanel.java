@@ -3,6 +3,7 @@ package DungeonAndDragons;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -46,6 +47,7 @@ public class CenterPanel extends JPanel {
         TheTest.setTitle("Dungeons And Dragons 5e Character Creator");
         TheTest.setVisible(true);
         TheTest.setLayout(entryGrid);
+
 
         JLabel dndImage = new JLabel(new ImageIcon(image));
         dndImage.setPreferredSize(new Dimension(100,100));
@@ -199,6 +201,9 @@ public class CenterPanel extends JPanel {
 
                 String racistChoiceValue = racistChoice.getSelectedItem().toString();
                 CharacterStorage.setCharacterRace(racistChoiceValue);
+
+                String characterClassValue = characterClassChoice.getSelectedItem().toString();
+                CharacterStorage.setCharacterClass(characterClassValue);
 
                 String StrengthValue = StrengthRollField.getText();
                 CharacterStorage.setStrengthValue(StrengthValue);

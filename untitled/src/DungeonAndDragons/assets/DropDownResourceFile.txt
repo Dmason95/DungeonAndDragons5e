@@ -1,0 +1,20 @@
+Hill Dwarf,Lawful Good,Barbarian,Soldier
+Dark Elf,Tempered Good,Bard,Acolyte
+Dragonborn,Chaotic Good,Cleric,Charlatan
+Dwarf,Lawful Neutral,Druid,Criminal
+Elf,Tempered Neutral,Fighter,Entertainer
+Forest Gnome,Chaotic Neutral,Monk,Folk Hero
+Gnome,Lawful Evil,Paladin,Guild Artisan
+Half Elf,Tempered Evil,Ranger,Hermit
+Halfling,Chaotic Evil,Rogue,Noble
+Half Orc,,Sorcerer,Outlander
+High Elf,,Warlock,Sage
+Human,,Wizard,Sailor
+LightFoot,,Urchin,
+Mountain Dwarf,,,
+No Race,,,
+Rock Gnome,,,
+Stout,,,
+Tiefling,,,
+Wood elf,,,
+

@@ -5,6 +5,8 @@ public class CharacterStorage {
     private static String characterName;
     private static String playerName;
     private static String characterRace;
+    private static String characterClass;
+    private static String Alignment;
     private static String strength;
     private static String dexerity;
 
@@ -33,6 +35,17 @@ public class CharacterStorage {
         return characterRace;
     }
 
+    public static void setCharacterClass(String CharacterClass) {
+        characterClass = CharacterClass;
+    }
+
+    public static String getCharacterClass(){
+        return characterClass;
+     }
+
+    public static void setAlignment(String Alignment){
+
+    }
     public static void setStrengthValue(String Strength) {
         strength = Strength;
     }
