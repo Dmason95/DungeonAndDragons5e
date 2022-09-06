@@ -177,14 +177,14 @@ public class CenterPanel extends JPanel {
         /**
          * TO DO FIX THE SHIT
          */
-//        JButton Dice = new JButton("Dice");
-//        TheTest.add(Dice);
-//        Dice.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                DiceRoller.main();
-//            }
-//        });
+        JButton Dice = new JButton("Dice");
+        TheTest.add(Dice);
+        Dice.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DiceRoller.main();
+            }
+        });
 
         JButton Next = new JButton("Next");
         TheTest.add(Next);
@@ -194,11 +194,19 @@ public class CenterPanel extends JPanel {
                 String CharacterNameValue = characterNameEntry.getText();
                 CharacterStorage.setCharacterName(CharacterNameValue);
 
+                String PlayerNameValue = playerName.getText();
+                CharacterStorage.setPlayerName(PlayerNameValue);
+
+                String racistChoiceValue = racistChoice.getSelectedItem().toString();
+                CharacterStorage.setCharacterRace(racistChoiceValue);
+
                 String StrengthValue = StrengthRollField.getText();
-                CharacterStorage.setStrengthObject(StrengthValue);
+                CharacterStorage.setStrengthValue(StrengthValue);
 
                 System.out.println(CharacterStorage.getCharacterName());
-                System.out.println(CharacterStorage.getStrengthObject());
+                System.out.println(CharacterStorage.getPlayerName());
+                System.out.println(CharacterStorage.getCharacterRace());
+                System.out.println(CharacterStorage.getStrengthValue());
             }
         });
 

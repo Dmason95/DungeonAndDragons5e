@@ -59,10 +59,11 @@ public class DiceRoller {
         DiceBlockTen.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    Double d10RollRandomizer = Math.random() * 10 + 1;
-                    Double d10Reformat = Math.floor(d10RollRandomizer);
+                Integer d10Int = 0;
+                Double d10RollRandomizer = Math.random() * 10 + 1;
+                Double d10Reformat = Math.floor(d10RollRandomizer);
 
-                    Integer d10Int = d10Reformat.intValue();
+                d10Int = d10Reformat.intValue();
 
                 D10RollResult.setTitle("D10 Result");
                 D10RollResult.setVisible(true);
@@ -70,7 +71,10 @@ public class DiceRoller {
                     JTextArea D10RollResults = new JTextArea();
                     D10RollResults.setText("You rolled the D10 and got: " + d10Int.toString());
 
+
                     D10RollResult.add(D10RollResults);
+
+
 
 
             }
